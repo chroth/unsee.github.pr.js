@@ -13,5 +13,7 @@ document.querySelectorAll(".js-reviewed-toggle [type=checkbox]:checked").forEach
     } else if(e.key === 'k') {
       document.querySelector("[name=viewed]:not(:checked)")?.click();
     }
+
+    document.querySelector("[name=viewed]:not(:checked)")?.scrollIntoView();
   });
 })();
