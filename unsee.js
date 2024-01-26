@@ -10,10 +10,10 @@ document.querySelectorAll(".js-reviewed-toggle [type=checkbox]:checked").forEach
   document.addEventListener("keyup", (e) => {
     if(e.key === 'K') {
       [...document.querySelectorAll("[name=viewed]:checked")].at(-1)?.click();
+      document.querySelector("[name=viewed]:not(:checked)")?.scrollIntoView();
     } else if(e.key === 'k') {
       document.querySelector("[name=viewed]:not(:checked)")?.click();
+      document.querySelector("[name=viewed]:not(:checked)")?.scrollIntoView();
     }
-
-    document.querySelector("[name=viewed]:not(:checked)")?.scrollIntoView();
   });
 })();
